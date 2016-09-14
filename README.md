@@ -1,45 +1,28 @@
 MTN.NIX.11 Automated environment configuration management
 ---
 
-
+**TASK7**
 
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
 
-1. I setup vagrant box and install chef-solo:
+1. I download CHEF & CHEF DK rmp files and put in VM.
 
-wget https://packages.chef.io/stable/el/6/chef-12.13.37-1.el6.x86_64.rpm
-rpm -i chef-12.13.37-1.el6.x86_64.rpm
-wget https://packages.chef.io/stable/el/6/chefdk-0.17.17-1.el6.x86_64.rpm
-rpm -i chefdk-0.17.17-1.el6.x86_64.rpm
+2. I download Java cookbook from Opscode community. I used 
+   - build init
+   - build install
+   - build packege
+  
+   and as artefact I got JAVA cookbook with all dependencies.
 
-2. I created ~/.chef/solo.rb file with context:
+3. I prepared files solo.rb and runlist.json and copied them by Vagrantfile
 
-log_level :debug
-file_cache_path "/root/.chef/"
-cookbook_path "/root/chef_cookbooks"
-json_attribs "/root/.chef/runlist.json"
+4. I created new cookbok for jboss by 
 
-Also I created runlist.json file (will come back to it later)
+   $ chef generate cookbook jboss
 
-3. I downloaded cookboks from http://community.opscode.com/cookbooks/ for nginx and iptables. Then I saw in metadata.rb and realized that nginx has dependencies. I used berkshelf for solve this issue:
+and I filled [attributes](https://github.com/evgeniy-krupen/chef/blob/task7/task7/chef_cookbooks/jboss/attributes/default.rb), [templates](https://github.com/evgeniy-krupen/chef/blob/task7/task7/chef_cookbooks/jboss/templates/default/jboss.erb), [recipe](https://github.com/evgeniy-krupen/chef/blob/task7/task7/chef_cookbooks/jboss/recipes/default.rb) in jboss cookbook.
 
-cd /root/chef_cookbooks/nginx
-berks init
-yum install git
-berks init (again)
-berks install
-berks packege
+5. When vagrant provision was finished, I connected to VM by ssh and run chef-solo:
 
-As output I got artefact with all dependencies. I extracted it in /root/chef_cookbooks.
-
-4. I created runlist.json in /root/.chef/runlist.json :
-
-{ 
-"run_list": ["recipe[nginx::default]", "recipe[iptables::default]"],
-  "nginx": {"default_root":"/usr/share/nginx/html"} 
-}
-
-5. I run chef-solo after all steps (with logging)
-
-chef-solo -c /root/.chef/solo.rb > cheflog.log
+   $ chef-solo -c /root/.chef/solo.rb > cheflog.log

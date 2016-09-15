@@ -1,0 +1,187 @@
+[Student@epbyminw1766 mntlab]$ knife bootstrap 192.168.25.10 -N web2 -x root -P vagrant -r 'role[jboss_role]' -E 'Chef-env'
+Node web2 exists, overwrite it? (Y/N) y
+Client web2 exists, overwrite it? (Y/N) y
+Creating new client for web2
+Creating new node for web2
+Connecting to 192.168.25.10
+192.168.25.10 -----> Existing Chef installation detected
+192.168.25.10 Starting the first Chef Client run...
+192.168.25.10 Starting Chef Client, version 12.14.60
+192.168.25.10 resolving cookbooks for run list: ["java::default", "jboss::default"]
+192.168.25.10 Synchronizing Cookbooks:
+192.168.25.10   - java (1.42.0)
+192.168.25.10   - apt (4.0.1)
+192.168.25.10   - compat_resource (12.10.7)
+192.168.25.10   - windows (2.0.2)
+192.168.25.10   - homebrew (2.1.2)
+192.168.25.10   - build-essential (6.0.4)
+192.168.25.10   - seven_zip (2.0.2)
+192.168.25.10   - mingw (1.2.4)
+192.168.25.10   - jboss (0.1.0)
+192.168.25.10 Installing Cookbook Gems:
+192.168.25.10 Compiling Cookbooks...
+192.168.25.10 [2016-09-15T17:00:19+01:00] WARN: Chef::Provider::AptRepository already exists!  Cannot create deprecation class for LWRP provider apt_repository from cookbook apt
+192.168.25.10 [2016-09-15T17:00:19+01:00] WARN: AptRepository already exists!  Deprecation class overwrites Custom resource apt_repository from cookbook apt
+192.168.25.10 Converging 17 resources
+192.168.25.10 Recipe: java::notify
+192.168.25.10   * log[jdk-version-changed] action nothing (skipped due to action :nothing)
+192.168.25.10 Recipe: java::openjdk
+192.168.25.10   * yum_package[java-1.6.0-openjdk] action install
+192.168.25.10     - install version 1.6.0.40-1.13.12.6.el6_8 of package java-1.6.0-openjdk
+192.168.25.10 Recipe: java::notify
+192.168.25.10   * log[jdk-version-changed] action write
+192.168.25.10   
+192.168.25.10 Recipe: java::openjdk
+192.168.25.10   * yum_package[java-1.6.0-openjdk-devel] action install
+192.168.25.10     - install version 1.6.0.40-1.13.12.6.el6_8 of package java-1.6.0-openjdk-devel
+192.168.25.10 Recipe: java::notify
+192.168.25.10   * log[jdk-version-changed] action write
+192.168.25.10   
+192.168.25.10 Recipe: java::openjdk
+192.168.25.10   * java_alternatives[set-java-alternatives] action set
+192.168.25.10     - Add alternative for appletviewer
+192.168.25.10     - Add alternative for apt
+192.168.25.10     - Add alternative for extcheck
+192.168.25.10     - Add alternative for idlj
+192.168.25.10     - Add alternative for jar
+192.168.25.10     - Add alternative for jarsigner
+192.168.25.10     - Add alternative for java
+192.168.25.10     - Add alternative for javac
+192.168.25.10     - Add alternative for javadoc
+192.168.25.10     - Add alternative for javah
+192.168.25.10     - Add alternative for javap
+192.168.25.10     - Add alternative for jconsole
+192.168.25.10     - Add alternative for jdb
+192.168.25.10     - Add alternative for jhat
+192.168.25.10     - Add alternative for jinfo
+192.168.25.10     - Add alternative for jmap
+192.168.25.10     - Add alternative for jps
+192.168.25.10     - Add alternative for jrunscript
+192.168.25.10     - Add alternative for jsadebugd
+192.168.25.10     - Add alternative for jstack
+192.168.25.10     - Add alternative for jstat
+192.168.25.10     - Add alternative for jstatd
+192.168.25.10     - Add alternative for keytool
+192.168.25.10     - Add alternative for native2ascii
+192.168.25.10     - Add alternative for orbd
+192.168.25.10     - Add alternative for pack200
+192.168.25.10     - Add alternative for policytool
+192.168.25.10     - Add alternative for rmic
+192.168.25.10     - Add alternative for rmid
+192.168.25.10     - Add alternative for rmiregistry
+192.168.25.10     - Add alternative for schemagen
+192.168.25.10     - Add alternative for serialver
+192.168.25.10     - Add alternative for servertool
+192.168.25.10     - Add alternative for tnameserv
+192.168.25.10     - Add alternative for unpack200
+192.168.25.10     - Add alternative for wsgen
+192.168.25.10     - Add alternative for wsimport
+192.168.25.10     - Add alternative for xjc
+192.168.25.10 Recipe: java::set_java_home
+192.168.25.10   * ruby_block[set-env-java-home] action run
+192.168.25.10     - execute the ruby block set-env-java-home
+192.168.25.10   * directory[/etc/profile.d] action create (up to date)
+192.168.25.10   * template[/etc/profile.d/jdk.sh] action create
+192.168.25.10     - create new file /etc/profile.d/jdk.sh
+192.168.25.10     - update content in file /etc/profile.d/jdk.sh from none to 778ff5
+192.168.25.10     --- /etc/profile.d/jdk.sh	2016-09-15 17:00:46.766015974 +0100
+192.168.25.10     +++ /etc/profile.d/.chef-jdk.sh20160915-18849-1t66p51	2016-09-15 17:00:46.766015974 +0100
+192.168.25.10     @@ -1 +1,2 @@
+192.168.25.10     +export JAVA_HOME=/usr/lib/jvm/java-1.6.0
+192.168.25.10     - change mode from '' to '0755'
+192.168.25.10 Recipe: jboss::default
+192.168.25.10   * yum_package[unzip] action install
+192.168.25.10     - install version 6.0-4.el6 of package unzip
+192.168.25.10   * linux_user[jboss] action create
+192.168.25.10     - create user jboss
+192.168.25.10   * remote_file[/tmp/jboss-as-distribution-6.1.0.Final.zip] action create
+192.168.25.10     - create new file /tmp/jboss-as-distribution-6.1.0.Final.zip
+192.168.25.10     - update content in file /tmp/jboss-as-distribution-6.1.0.Final.zip from none to 3426fd
+192.168.25.10     (file sizes exceed 10000000 bytes, diff output suppressed)
+192.168.25.10     - change mode from '' to '0755'
+192.168.25.10     - change owner from '' to 'root'
+192.168.25.10     - change group from '' to 'root'
+192.168.25.10   * remote_file[/tmp/hudson.zip] action create
+192.168.25.10     - create new file /tmp/hudson.zip
+192.168.25.10     - update content in file /tmp/hudson.zip from none to b54a7a
+192.168.25.10     (file sizes exceed 10000000 bytes, diff output suppressed)
+192.168.25.10     - change mode from '' to '0755'
+192.168.25.10     - change owner from '' to 'root'
+192.168.25.10     - change group from '' to 'root'
+192.168.25.10   * execute[unzip_jboss] action run
+192.168.25.10     - execute unzip -o /tmp/jboss-as-distribution-6.1.0.Final.zip -d /opt
+192.168.25.10   * execute[unzip_app] action run
+192.168.25.10     - execute unzip -o /tmp/hudson.zip -d /opt/jboss-6.1.0.Final/server/default/deploy/
+192.168.25.10   * template[/opt/jboss-6.1.0.Final/server/default/deploy/hudson/hudson.xml] action create
+192.168.25.10     - update content in file /opt/jboss-6.1.0.Final/server/default/deploy/hudson/hudson.xml from 0bed72 to f92a80
+192.168.25.10     --- /opt/jboss-6.1.0.Final/server/default/deploy/hudson/hudson.xml	2014-01-16 15:35:44.000000000 +0000
+192.168.25.10     +++ /opt/jboss-6.1.0.Final/server/default/deploy/hudson/.chef-hudson.xml20160915-18849-1ynwe54	2016-09-15 17:01:51.147015975 +0100
+192.168.25.10     @@ -12,13 +12,10 @@
+192.168.25.10       <services>
+192.168.25.10          <framework>
+192.168.25.10            <type>Java EE</type>
+192.168.25.10     -       <engine>Tomcat-7.0.12</engine>
+192.168.25.10     +       <engine>jboss</engine>
+192.168.25.10            <no-of-nodes>1</no-of-nodes>
+192.168.25.10            <max-nodes>2</max-nodes>
+192.168.25.10     -    </framework>
+192.168.25.10     -    <elastic-load-balancer>
+192.168.25.10     -      <engine>Nginx-1.2</engine>
+192.168.25.10     -    </elastic-load-balancer>
+192.168.25.10     +    </framework>    
+192.168.25.10        </services>
+192.168.25.10      </cumulogic-app>
+192.168.25.10   * execute[jboss_owner] action run
+192.168.25.10     - execute chown -R jboss:jboss /opt/jboss-6.1.0.Final 
+192.168.25.10   * template[/etc/init.d/jboss] action create
+192.168.25.10     - create new file /etc/init.d/jboss
+192.168.25.10     - update content in file /etc/init.d/jboss from none to 10b407
+192.168.25.10     --- /etc/init.d/jboss	2016-09-15 17:01:51.196015975 +0100
+192.168.25.10     +++ /etc/init.d/.chef-jboss20160915-18849-1fqe23m	2016-09-15 17:01:51.196015975 +0100
+192.168.25.10     @@ -1 +1,36 @@
+192.168.25.10     +#!/bin/bash
+192.168.25.10     +# chkconfig: 2345 95 05
+192.168.25.10     +
+192.168.25.10     +start(){
+192.168.25.10     +echo "JBOSS starting"
+192.168.25.10     +su -l jboss -c 'nohup /opt/jboss-6.1.0.Final/bin/run.sh -c default &>> /opt/jboss-6.1.0.Final/log.log &
+192.168.25.10     +echo $! > /opt/jboss-6.1.0.Final/pid'
+192.168.25.10     +}
+192.168.25.10     +
+192.168.25.10     +stop(){
+192.168.25.10     +echo "JBOSS stopping"
+192.168.25.10     +pkill -9 -P $(cat /opt/jboss-6.1.0.Final/pid) &>> /opt/jboss-6.1.0.Final/log.log &
+192.168.25.10     +}
+192.168.25.10     +
+192.168.25.10     +restart(){
+192.168.25.10     +stop
+192.168.25.10     +sleep 5
+192.168.25.10     +start
+192.168.25.10     +}
+192.168.25.10     +q
+192.168.25.10     +case "$1" in
+192.168.25.10     +start)
+192.168.25.10     +start
+192.168.25.10     +;;
+192.168.25.10     +stop)
+192.168.25.10     +stop
+192.168.25.10     +;;
+192.168.25.10     +restart)
+192.168.25.10     +restart
+192.168.25.10     +;;
+192.168.25.10     +*)
+192.168.25.10     +echo "Usage: jboss {start|stop|restart}"
+192.168.25.10     +exit 1
+192.168.25.10     +esac
+192.168.25.10     +exit
+192.168.25.10     - change mode from '' to '0755'
+192.168.25.10     - change owner from '' to 'jboss'
+192.168.25.10     - change group from '' to 'jboss'
+192.168.25.10   * service[jboss] action enable
+192.168.25.10     - enable service service[jboss]
+192.168.25.10   * service[jboss] action start
+192.168.25.10     - start service service[jboss]
+192.168.25.10 
+192.168.25.10 Running handlers:
+192.168.25.10 Running handlers complete
+192.168.25.10 Chef Client finished, 18/20 resources updated in 01 minutes 35 seconds

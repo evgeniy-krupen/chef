@@ -1,45 +1,55 @@
 MTN.NIX.11 Automated environment configuration management
 ---
 
-Chef Introduction
+Task8
+
 
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
 
-1. I setup vagrant box and install chef-solo:
+**1. I setup new VM by Vagrantfile**
+**2. I installed chef-server by https://docs.chef.io/install_server.html**
 
-wget https://packages.chef.io/stable/el/6/chef-12.13.37-1.el6.x86_64.rpm
-rpm -i chef-12.13.37-1.el6.x86_64.rpm
-wget https://packages.chef.io/stable/el/6/chefdk-0.17.17-1.el6.x86_64.rpm
-rpm -i chefdk-0.17.17-1.el6.x86_64.rpm
+$ sudo chef-server-ctl install chef-manage
 
-2. I created ~/.chef/solo.rb file with context:
+$ sudo chef-server-ctl reconfigure
 
-log_level :debug
-file_cache_path "/root/.chef/"
-cookbook_path "/root/chef_cookbooks"
-json_attribs "/root/.chef/runlist.json"
+$ sudo chef-manage-ctl reconfigure
 
-Also I created runlist.json file (will come back to it later)
+$ sudo chef-server-ctl user-create admin evgeniy krupen evgeniy_krupen@epam.com '123456' --filename 'user.pem'
 
-3. I downloaded cookboks from http://community.opscode.com/cookbooks/ for nginx and iptables. Then I saw in metadata.rb and realized that nginx has dependencies. I used berkshelf for solve this issue:
+$ chef-server-ctl org-create myorg 'krupen org' --association_user admin --filename 'myorg.pem'
+![1](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/1-1.png)
 
-cd /root/chef_cookbooks/nginx
-berks init
-yum install git
-berks init (again)
-berks install
-berks packege
+**3. I downloaded knife.rb from chef server, setup chef client on hostname and connected client to server**
+![2](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/1-2.png)
 
-As output I got artefact with all dependencies. I extracted it in /root/chef_cookbooks.
+with very good link - https://www.digitalocean.com/community/tutorials/how-to-use-roles-and-environments-in-chef-to-control-server-configurations
 
-4. I created runlist.json in /root/.chef/runlist.json :
+**4. I upload cookboks to chef server**
 
-{ 
-"run_list": ["recipe[nginx::default]", "recipe[iptables::default]"],
-  "nginx": {"default_root":"/usr/share/nginx/html"} 
-}
+$ knife cookbook upload --all
 
-5. I run chef-solo after all steps (with logging)
+![3](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/1-3.png)
 
-chef-solo -c /root/.chef/solo.rb > cheflog.log
+**5. I modified jboss recipes**
+
+[attributes](https://github.com/evgeniy-krupen/chef/blob/task8/task8/chef_cookbooks/jboss/attributes/default.rb)
+
+[recipe](https://github.com/evgeniy-krupen/chef/blob/task8/task8/chef_cookbooks/jboss/recipes/default.rb)
+
+[hudson template](https://github.com/evgeniy-krupen/chef/blob/task8/task8/chef_cookbooks/jboss/templates/default/hudson.erb)
+
+**6.I created [environtment](https://github.com/evgeniy-krupen/chef/blob/task8/task8/environment.json), [role](https://github.com/evgeniy-krupen/chef/blob/task8/task8/role.json), [data bag](https://github.com/evgeniy-krupen/chef/blob/task8/task8/hudson.json)**
+
+ I uploaded only json files from chef server because I did not understand how to download them from server
+ 
+ ![8](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/1-8.png)
+ 
+ ![9](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/1-9.png)
+
+ ![11](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/123.png)
+ 
+
+ 
+

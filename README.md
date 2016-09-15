@@ -50,6 +50,11 @@ $ knife cookbook upload --all
 
  ![11](https://github.com/evgeniy-krupen/chef/blob/task8/task8/sources/123.png)
  
+ $ knife bootstrap 192.168.25.10 -N web2 -x root -P vagrant -r 'role[jboss_role]' -E 'Chef-env'
+ 
+ Also check my [bootstrap.log](https://github.com/evgeniy-krupen/chef/blob/task8/task8/bootstrap.log)
+ 
+ Thank you for your time.
 
  
 

@@ -6,10 +6,10 @@ MTN.NIX.11 Automated environment configuration management
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
 
-**1. I download CHEF & CHEF DK rmp files and put in VM.**
+**1. I downloaded CHEF & CHEF DK rmp files and put in VM.**
 
 
-**2. I download Java cookbook from Opscode community. I used**
+**2. I downloaded Java cookbook from Opscode community. I used**
    - build init
    - build install
    - build packege

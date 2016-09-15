@@ -27,7 +27,7 @@ and I filled [attributes](https://github.com/evgeniy-krupen/chef/blob/task7/task
 
 **5. I connected to VM by ssh and run chef-solo when vagrant provision was finished :**
 
-   $ chef-solo -c /root/.chef/solo.rb > cheflog.log
+   $ chef-solo -c /root/.chef/solo.rb > [log.log](https://github.com/evgeniy-krupen/chef/blob/task7/task7/chef_cookbooks/jboss/log.log)
    
 **6. I checked how it works**
 

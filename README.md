@@ -1,45 +1,60 @@
 MTN.NIX.11 Automated environment configuration management
 ---
 
-Chef Introduction
+**Task9**
 
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
 
-1. I setup vagrant box and install chef-solo:
 
-wget https://packages.chef.io/stable/el/6/chef-12.13.37-1.el6.x86_64.rpm
-rpm -i chef-12.13.37-1.el6.x86_64.rpm
-wget https://packages.chef.io/stable/el/6/chefdk-0.17.17-1.el6.x86_64.rpm
-rpm -i chefdk-0.17.17-1.el6.x86_64.rpm
+**1. First of all I created new role for web resource**
 
-2. I created ~/.chef/solo.rb file with context:
+$ knife cookbook create web
 
-log_level :debug
-file_cache_path "/root/.chef/"
-cookbook_path "/root/chef_cookbooks"
-json_attribs "/root/.chef/runlist.json"
+And described all commands which should be in providers
 
-Also I created runlist.json file (will come back to it later)
+**2. I created cookbooks "web_nginx" as provider, added what provider should do**
 
-3. I downloaded cookboks from http://community.opscode.com/cookbooks/ for nginx and iptables. Then I saw in metadata.rb and realized that nginx has dependencies. I used berkshelf for solve this issue:
+the actual code in - web_nginx/provider/default.rb
+recipe - web_nginx/recipe/default.rb
+template for default page - web_nginx/templates/default/index.erb
 
-cd /root/chef_cookbooks/nginx
-berks init
-yum install git
-berks init (again)
-berks install
-berks packege
+**3. I created role for Nginx_web_server**
 
-As output I got artefact with all dependencies. I extracted it in /root/chef_cookbooks.
+**4. I created cookbooks "web_apache" as provider like "web_nginx"**
 
-4. I created runlist.json in /root/.chef/runlist.json :
+the actual code in - web_apache/provider/default.rb
+template for default page - web_apache/templates/default/index.erb
+recipe - web_apache/recipe/default.rb
 
-{ 
-"run_list": ["recipe[nginx::default]", "recipe[iptables::default]"],
-  "nginx": {"default_root":"/usr/share/nginx/html"} 
-}
 
-5. I run chef-solo after all steps (with logging)
+**5. I created role Apache_web_server**
 
-chef-solo -c /root/.chef/solo.rb > cheflog.log
+**6. I made environment attribute "web_server_type" and recorded names of roles.**
+
+**7. And bootstrap all roles**
+
+$ knife bootstrap 192.168.25.10 -N web2 -x root -P vagrant -r 'role[Nginx_web_server]' -E 'Chef-env'
+
+$ knife bootstrap 192.168.25.11 -N web3 -x root -P vagrant -r 'role[Apache_web_server]' -E 'Chef-env'
+
+**8. Screenshots**
+
+clean install:
+![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/nginx.png)
+after "action :setup"
+
+![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/nginx-2.png)
+
+![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/apache.png)
+
+![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/apache2.png)
+
+**9. As I have understand all logical chain:**
+
+bootstrap + node + role + env => start recipe web with role check from env. attribute => start recipe web_nginx\web_appache =>
+=> call resource web with actions from provider web_nginx\web_apache => run code from provider
+
+in web I included dependencies
+
+Thank you for your time.

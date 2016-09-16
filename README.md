@@ -42,6 +42,7 @@ $ knife bootstrap 192.168.25.11 -N web3 -x root -P vagrant -r 'role[Apache_web_s
 
 clean install:
 ![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/nginx.png)
+
 after "action :setup"
 
 ![](https://github.com/evgeniy-krupen/chef/blob/task9/task9/source/nginx-2.png)

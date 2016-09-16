@@ -1,0 +1,42 @@
+[Student@epbyminw1766 chef_cookbooks]$ knife bootstrap 192.168.25.11 -N web3 -x root -P vagrant -r 'role[Apache_web_server]' -E 'Chef-env'
+Node web3 exists, overwrite it? (Y/N) y
+Client web3 exists, overwrite it? (Y/N) y
+Creating new client for web3
+Creating new node for web3
+Connecting to 192.168.25.11
+192.168.25.11 -----> Existing Chef installation detected
+192.168.25.11 Starting the first Chef Client run...
+192.168.25.11 Starting Chef Client, version 12.14.60
+192.168.25.11 resolving cookbooks for run list: ["web::default"]
+192.168.25.11 Synchronizing Cookbooks:
+192.168.25.11   - web (0.1.0)
+192.168.25.11   - web_nginx (0.1.0)
+192.168.25.11   - web_apache (0.1.0)
+192.168.25.11 Installing Cookbook Gems:
+192.168.25.11 Compiling Cookbooks...
+192.168.25.11 Converging 1 resources
+192.168.25.11 Recipe: web_apache::default
+192.168.25.11   * web[web_apache] action install (up to date)
+192.168.25.11   * web[web_apache] action setup (up to date)
+192.168.25.11   * web[web_apache] action start (up to date)
+192.168.25.11   * yum_package[httpd] action install
+192.168.25.11     - install version 2.2.15-54.el6.centos of package httpd
+192.168.25.11   * service[httpd] action enable
+192.168.25.11     - enable service service[httpd]
+192.168.25.11   * template[/var/www/html/index.html] action create (up to date)
+192.168.25.11   * service[httpd] action start
+192.168.25.11     - start service service[httpd]
+192.168.25.11 
+192.168.25.11 Running handlers:
+192.168.25.11 Running handlers complete
+192.168.25.11 
+192.168.25.11 Deprecated features used!
+192.168.25.11   Using an LWRP provider by its name (WebApache) directly is no longer supported in Chef 12 and will be removed.  Use Chef::ProviderResolver.new(node, resource, action) instead. at 1 location:
+192.168.25.11     - /var/chef/cache/cookbooks/web_apache/recipes/default.rb:13:in `block in from_file'
+192.168.25.11   Cloning resource attributes for service[httpd] from prior resource (CHEF-3694)
+192.168.25.11 Previous service[httpd]: /var/chef/cache/cookbooks/web_apache/providers/default.rb:32:in `block in class_from_file'
+192.168.25.11 Current  service[httpd]: /var/chef/cache/cookbooks/web_apache/providers/default.rb:14:in `block in class_from_file' at 1 location:
+192.168.25.11     - /var/chef/cache/cookbooks/web_apache/providers/default.rb:14:in `block in class_from_file'
+192.168.25.11 
+192.168.25.11 Chef Client finished, 3/7 resources updated in 05 seconds
+

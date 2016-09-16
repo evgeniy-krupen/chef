@@ -1,0 +1,19 @@
+{
+  "name": "Chef-env",
+  "description": "",
+  "cookbook_versions": {
+
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "web_server_type": {
+      "nginx": "Nginx_web_server",
+      "httpd": "Apache_web_server"
+    }
+  },
+  "override_attributes": {
+
+  }
+}
+

@@ -1,0 +1,157 @@
+[Student@epbyminw1766 chef_cookbooks]$ knife bootstrap 192.168.25.10 -N web2 -x root -P vagrant -r 'role[Nginx_web_server]' -E 'Chef-env'
+Node web2 exists, overwrite it? (Y/N) y
+Client web2 exists, overwrite it? (Y/N) y
+Creating new client for web2
+Creating new node for web2
+Connecting to 192.168.25.10
+192.168.25.10 -----> Existing Chef installation detected
+192.168.25.10 Starting the first Chef Client run...
+192.168.25.10 Starting Chef Client, version 12.14.60
+192.168.25.10 resolving cookbooks for run list: ["web::default"]
+192.168.25.10 Synchronizing Cookbooks:
+192.168.25.10   - web_nginx (0.1.0)
+192.168.25.10   - web_apache (0.1.0)
+192.168.25.10   - web (0.1.0)
+192.168.25.10 Installing Cookbook Gems:
+192.168.25.10 Compiling Cookbooks...
+192.168.25.10 Converging 1 resources
+192.168.25.10 Recipe: web_nginx::default
+192.168.25.10   * web[web_nginx] action install (up to date)
+192.168.25.10   * web[web_nginx] action setup (up to date)
+192.168.25.10   * web[web_nginx] action start (up to date)
+192.168.25.10   * yum_package[nginx] action install
+192.168.25.10     - install version 1.10.1-1.el6 of package nginx
+192.168.25.10   * template[/usr/share/nginx/html/index.html] action create
+192.168.25.10     - update content in file /usr/share/nginx/html/index.html from ff6311 to 78d9bf
+192.168.25.10     --- /usr/share/nginx/html/index.html	2016-07-02 20:41:18.000000000 +0100
+192.168.25.10     +++ /usr/share/nginx/html/.chef-index.html20160916-18666-15lj9ih	2016-09-16 13:54:27.833007006 +0100
+192.168.25.10     @@ -1,117 +1,3 @@
+192.168.25.10     -<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+192.168.25.10     -
+192.168.25.10     -<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+192.168.25.10     -    <head>
+192.168.25.10     -        <title>Test Page for the Nginx HTTP Server on EPEL</title>
+192.168.25.10     -        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+192.168.25.10     -        <style type="text/css">
+192.168.25.10     -            /*<![CDATA[*/
+192.168.25.10     -            body {
+192.168.25.10     -                background-color: #fff;
+192.168.25.10     -                color: #000;
+192.168.25.10     -                font-size: 0.9em;
+192.168.25.10     -                font-family: sans-serif,helvetica;
+192.168.25.10     -                margin: 0;
+192.168.25.10     -                padding: 0;
+192.168.25.10     -            }
+192.168.25.10     -            :link {
+192.168.25.10     -                color: #c00;
+192.168.25.10     -            }
+192.168.25.10     -            :visited {
+192.168.25.10     -                color: #c00;
+192.168.25.10     -            }
+192.168.25.10     -            a:hover {
+192.168.25.10     -                color: #f50;
+192.168.25.10     -            }
+192.168.25.10     -            h1 {
+192.168.25.10     -                text-align: center;
+192.168.25.10     -                margin: 0;
+192.168.25.10     -                padding: 0.6em 2em 0.4em;
+192.168.25.10     -                background-color: #294172;
+192.168.25.10     -                color: #fff;
+192.168.25.10     -                font-weight: normal;
+192.168.25.10     -                font-size: 1.75em;
+192.168.25.10     -                border-bottom: 2px solid #000;
+192.168.25.10     -            }
+192.168.25.10     -            h1 strong {
+192.168.25.10     -                font-weight: bold;
+192.168.25.10     -                font-size: 1.5em;
+192.168.25.10     -            }
+192.168.25.10     -            h2 {
+192.168.25.10     -                text-align: center;
+192.168.25.10     -                background-color: #3C6EB4;
+192.168.25.10     -                font-size: 1.1em;
+192.168.25.10     -                font-weight: bold;
+192.168.25.10     -                color: #fff;
+192.168.25.10     -                margin: 0;
+192.168.25.10     -                padding: 0.5em;
+192.168.25.10     -                border-bottom: 2px solid #294172;
+192.168.25.10     -            }
+192.168.25.10     -            hr {
+192.168.25.10     -                display: none;
+192.168.25.10     -            }
+192.168.25.10     -            .content {
+192.168.25.10     -                padding: 1em 5em;
+192.168.25.10     -            }
+192.168.25.10     -            .alert {
+192.168.25.10     -                border: 2px solid #000;
+192.168.25.10     -            }
+192.168.25.10     -
+192.168.25.10     -            img {
+192.168.25.10     -                border: 2px solid #fff;
+192.168.25.10     -                padding: 2px;
+192.168.25.10     -                margin: 2px;
+192.168.25.10     -            }
+192.168.25.10     -            a:hover img {
+192.168.25.10     -                border: 2px solid #294172;
+192.168.25.10     -            }
+192.168.25.10     -            .logos {
+192.168.25.10     -                margin: 1em;
+192.168.25.10     -                text-align: center;
+192.168.25.10     -            }
+192.168.25.10     -            /*]]>*/
+192.168.25.10     -        </style>
+192.168.25.10     -    </head>
+192.168.25.10     -
+192.168.25.10     -    <body>
+192.168.25.10     -        <h1>Welcome to <strong>nginx</strong> on EPEL!</h1>
+192.168.25.10     -
+192.168.25.10     -        <div class="content">
+192.168.25.10     -            <p>This page is used to test the proper operation of the
+192.168.25.10     -            <strong>nginx</strong> HTTP server after it has been
+192.168.25.10     -            installed. If you can read this page, it means that the
+192.168.25.10     -            web server installed at this site is working
+192.168.25.10     -            properly.</p>
+192.168.25.10     -
+192.168.25.10     -            <div class="alert">
+192.168.25.10     -                <h2>Website Administrator</h2>
+192.168.25.10     -                <div class="content">
+192.168.25.10     -                    <p>This is the default <tt>index.html</tt> page that
+192.168.25.10     -                    is distributed with <strong>nginx</strong> on
+192.168.25.10     -                    EPEL.  It is located in
+192.168.25.10     -                    <tt>/usr/share/nginx/html</tt>.</p>
+192.168.25.10     -
+192.168.25.10     -                    <p>You should now put your content in a location of
+192.168.25.10     -                    your choice and edit the <tt>root</tt> configuration
+192.168.25.10     -                    directive in the <strong>nginx</strong>
+192.168.25.10     -                    configuration file
+192.168.25.10     -                    <tt>/etc/nginx/nginx.conf</tt>.</p>
+192.168.25.10     -
+192.168.25.10     -                </div>
+192.168.25.10     -            </div>
+192.168.25.10     -
+192.168.25.10     -            <div class="logos">
+192.168.25.10     -                <a href="http://nginx.net/"><img
+192.168.25.10     -                    src="nginx-logo.png" 
+192.168.25.10     -                    alt="[ Powered by nginx ]"
+192.168.25.10     -                    width="121" height="32" /></a>
+192.168.25.10     -
+192.168.25.10     -                <a href="http://fedoraproject.org/"><img 
+192.168.25.10     -                    src="poweredby.png" 
+192.168.25.10     -                    alt="[ Powered by Fedora EPEL ]"
+192.168.25.10     -                    width="88" height="31" /></a>
+192.168.25.10     -            </div>
+192.168.25.10     -        </div>
+192.168.25.10     -    </body>
+192.168.25.10     -</html>
+192.168.25.10     +This is my index by Krupen
+192.168.25.10     +nginx server (VM web2)
+192.168.25.10   * service[nginx] action start
+192.168.25.10     - start service service[nginx]
+192.168.25.10 
+192.168.25.10 Running handlers:
+192.168.25.10 Running handlers complete
+192.168.25.10 
+192.168.25.10 Deprecated features used!
+192.168.25.10   Using an LWRP provider by its name (WebNginx) directly is no longer supported in Chef 12 and will be removed.  Use Chef::ProviderResolver.new(node, resource, action) instead. at 1 location:
+192.168.25.10     - /var/chef/cache/cookbooks/web_nginx/recipes/default.rb:12:in `block in from_file'
+192.168.25.10 
+192.168.25.10 Chef Client finished, 3/6 resources updated in 15 seconds

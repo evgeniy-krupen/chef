@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2204'
+username: vagrant
+ssh_key: "/home/Student/Desktop/vargant/mntlab/chef_cookbooks/.kitchen/kitchen-vagrant/kitchen-chef_cookbooks-default-sbeliakou-centos-67-x86-64/.vagrant/machines/default/virtualbox/private_key"
+last_action: create

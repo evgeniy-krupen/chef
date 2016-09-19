@@ -1,0 +1,226 @@
+I, [2016-09-19T20:27:33.422203 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Cleaning up any prior instances of <default-sbeliakou-centos-67-x86-64>
+I, [2016-09-19T20:27:33.422972 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Destroying <default-sbeliakou-centos-67-x86-64>...
+I, [2016-09-19T20:27:34.958427 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: VM not created. Moving on...
+I, [2016-09-19T20:27:34.994146 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Vagrant instance <default-sbeliakou-centos-67-x86-64> destroyed.
+I, [2016-09-19T20:27:34.996331 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Finished destroying <default-sbeliakou-centos-67-x86-64> (0m1.57s).
+I, [2016-09-19T20:27:34.996804 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Testing <default-sbeliakou-centos-67-x86-64>
+I, [2016-09-19T20:27:34.996969 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Creating <default-sbeliakou-centos-67-x86-64>...
+I, [2016-09-19T20:27:36.312427 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-09-19T20:27:36.489057 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Importing base box 'sbeliakou/centos-6.7-x86_64'...
+I, [2016-09-19T20:27:58.244813 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 50%[KProgress: 60%[KProgress: 70%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2016-09-19T20:27:59.328280 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Setting the name of the VM: kitchen-chef_cookbooks-default-sbeliakou-centos-67-x86-64_default_1474306079262_96010
+I, [2016-09-19T20:28:00.731996 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Fixed port collision for 22 => 2222. Now on port 2204.
+I, [2016-09-19T20:28:00.798735 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Clearing any previously set network interfaces...
+I, [2016-09-19T20:28:00.920226 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Preparing network interfaces based on configuration...
+I, [2016-09-19T20:28:00.920597 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: Adapter 1: nat
+I, [2016-09-19T20:28:01.059900 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Forwarding ports...
+I, [2016-09-19T20:28:01.107639 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: 22 (guest) => 2204 (host) (adapter 1)
+I, [2016-09-19T20:28:01.515275 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Booting VM...
+I, [2016-09-19T20:28:02.073011 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2016-09-19T20:28:02.439537 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: SSH address: 127.0.0.1:2204
+I, [2016-09-19T20:28:02.439802 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: SSH username: vagrant
+I, [2016-09-19T20:28:02.440028 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: SSH auth method: private key
+I, [2016-09-19T20:28:19.238825 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: 
+I, [2016-09-19T20:28:19.238916 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2016-09-19T20:28:19.238943 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: this with a newly generated keypair for better security.
+I, [2016-09-19T20:28:21.526806 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: 
+I, [2016-09-19T20:28:21.526889 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: Inserting generated public key within guest...
+I, [2016-09-19T20:28:22.004130 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: Removing insecure key from the guest if it's present...
+I, [2016-09-19T20:28:22.358020 #738]  INFO -- default-sbeliakou-centos-67-x86-64:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2016-09-19T20:28:23.134267 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Machine booted and ready!
+I, [2016-09-19T20:28:24.181171 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [default] No installation found.
+I, [2016-09-19T20:28:25.436491 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Loaded plugins: fastestmirror
+I, [2016-09-19T20:28:25.476230 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Setting up Install Process
+I, [2016-09-19T20:28:25.516092 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Determining fastest mirrors
+I, [2016-09-19T20:28:34.001966 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  * base: ftp.byfly.by
+I, [2016-09-19T20:28:34.002047 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  * epel: mirror.datacenter.by
+I, [2016-09-19T20:28:34.002302 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  * extras: ftp.byfly.by
+I, [2016-09-19T20:28:34.002600 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  * updates: ftp.byfly.by
+I, [2016-09-19T20:28:39.794623 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Package gcc-4.4.7-17.el6.x86_64 already installed and latest version
+I, [2016-09-19T20:28:39.796094 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Package binutils-2.20.51.0.2-5.44.el6.x86_64 already installed and latest version
+I, [2016-09-19T20:28:39.836141 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Package 1:make-3.81-23.el6.x86_64 already installed and latest version
+I, [2016-09-19T20:28:39.836535 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Package 4:perl-5.10.1-141.el6_7.1.x86_64 already installed and latest version
+I, [2016-09-19T20:28:39.837022 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Package bzip2-1.0.5-7.el6_0.x86_64 already installed and latest version
+I, [2016-09-19T20:28:39.837343 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Resolving Dependencies
+I, [2016-09-19T20:28:39.837678 #738]  INFO -- default-sbeliakou-centos-67-x86-64: --> Running transaction check
+I, [2016-09-19T20:28:39.838164 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ---> Package kernel-devel.x86_64 0:2.6.32-642.1.1.el6 will be installed
+I, [2016-09-19T20:28:40.723576 #738]  INFO -- default-sbeliakou-centos-67-x86-64: --> Finished Dependency Resolution
+I, [2016-09-19T20:28:40.772659 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:40.772770 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Dependencies Resolved
+I, [2016-09-19T20:28:40.773550 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:40.773597 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ================================================================================
+I, [2016-09-19T20:28:40.773625 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  Package            Arch         Version                    Repository     Size
+I, [2016-09-19T20:28:40.773673 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ================================================================================
+I, [2016-09-19T20:28:40.773695 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installing:
+I, [2016-09-19T20:28:40.773727 #738]  INFO -- default-sbeliakou-centos-67-x86-64:  kernel-devel       x86_64       2.6.32-642.1.1.el6         updates        11 M
+I, [2016-09-19T20:28:40.773771 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:40.773814 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Transaction Summary
+I, [2016-09-19T20:28:40.773858 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ================================================================================
+I, [2016-09-19T20:28:40.773935 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Install       1 Package(s)
+I, [2016-09-19T20:28:40.773979 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:40.774975 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Total download size: 11 M
+I, [2016-09-19T20:28:40.775771 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installed size: 26 M
+I, [2016-09-19T20:28:40.776568 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Downloading Packages:
+I, [2016-09-19T20:28:41.829971 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Running rpm_check_debug
+I, [2016-09-19T20:28:41.862364 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Running Transaction Test
+I, [2016-09-19T20:28:42.262247 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Transaction Test Succeeded
+I, [2016-09-19T20:28:42.276824 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Running Transaction
+I, [2016-09-19T20:28:45.770248 #738]  INFO -- default-sbeliakou-centos-67-x86-64:   Installing : kernel-devel-2.6.32-642.1.1.el6.x86_64                       1/1 
+I, [2016-09-19T20:28:45.876610 #738]  INFO -- default-sbeliakou-centos-67-x86-64:   Verifying  : kernel-devel-2.6.32-642.1.1.el6.x86_64                       1/1 
+I, [2016-09-19T20:28:45.876685 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:45.876713 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installed:
+I, [2016-09-19T20:28:45.876755 #738]  INFO -- default-sbeliakou-centos-67-x86-64:   kernel-devel.x86_64 0:2.6.32-642.1.1.el6                                      
+I, [2016-09-19T20:28:45.876778 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:28:45.896218 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Complete!
+I, [2016-09-19T20:28:46.330371 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Copy iso file /usr/share/virtualbox/VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+I, [2016-09-19T20:28:48.514564 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installing Virtualbox Guest Additions 5.0.24 - guest version is unknown
+I, [2016-09-19T20:28:48.699459 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Verifying archive integrity... All good.
+I, [2016-09-19T20:28:48.781248 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Uncompressing VirtualBox 5.0.24 Guest Additions for Linux............
+I, [2016-09-19T20:28:48.792076 #738]  INFO -- default-sbeliakou-centos-67-x86-64: VirtualBox Guest Additions installer
+I, [2016-09-19T20:28:48.895531 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Removing installed version 5.0.24 of VirtualBox Guest Additions...
+I, [2016-09-19T20:28:49.052279 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Stopping VirtualBox Additions [  OK  ]
+I, [2016-09-19T20:28:49.394831 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+I, [2016-09-19T20:28:49.764148 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Copying additional installer modules ...
+I, [2016-09-19T20:28:50.814161 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installing additional modules ...
+I, [2016-09-19T20:28:51.113539 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Removing existing VirtualBox non-DKMS kernel modules[  OK  ]
+I, [2016-09-19T20:28:51.608533 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Building the VirtualBox Guest Additions kernel modules
+I, [2016-09-19T20:29:15.695744 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Building the main Guest Additions module[  OK  ]
+I, [2016-09-19T20:29:20.025312 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Building the shared folder support module[  OK  ]
+I, [2016-09-19T20:29:21.410504 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Building the graphics driver module[  OK  ]
+I, [2016-09-19T20:29:56.058414 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Doing non-kernel setup of the Guest Additions[  OK  ]
+I, [2016-09-19T20:29:56.226251 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Starting the VirtualBox Guest Additions Installing the Window System drivers
+I, [2016-09-19T20:29:56.226333 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Could not find the X.Org or XFree86 Window System, skipping.
+I, [2016-09-19T20:29:56.230816 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [  OK  ]
+I, [2016-09-19T20:29:57.765507 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Checking for guest additions in VM...
+I, [2016-09-19T20:29:57.816143 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Setting hostname...
+I, [2016-09-19T20:30:02.293236 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2016-09-19T20:30:05.212632 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [SSH] Established
+I, [2016-09-19T20:30:05.213357 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Vagrant instance <default-sbeliakou-centos-67-x86-64> created.
+I, [2016-09-19T20:30:05.227670 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Finished creating <default-sbeliakou-centos-67-x86-64> (2m30.22s).
+I, [2016-09-19T20:30:05.241134 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Converging <default-sbeliakou-centos-67-x86-64>...
+I, [2016-09-19T20:30:05.241722 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Preparing files for transfer
+I, [2016-09-19T20:30:05.241809 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Preparing dna.json
+I, [2016-09-19T20:30:05.257709 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Berksfile, Cheffile, cookbooks/, or metadata.rb not found so Chef will run with effectively no cookbooks. Is this intended?
+I, [2016-09-19T20:30:05.257978 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Removing non-cookbook files before transfer
+I, [2016-09-19T20:30:05.272640 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Preparing solo.rb
+I, [2016-09-19T20:30:05.331603 #738]  INFO -- default-sbeliakou-centos-67-x86-64: -----> Installing Chef Omnibus (install only if missing)
+I, [2016-09-19T20:30:05.331825 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2016-09-19T20:30:05.331889 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Trying wget...
+I, [2016-09-19T20:30:05.874012 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Download complete.
+I, [2016-09-19T20:30:05.901998 #738]  INFO -- default-sbeliakou-centos-67-x86-64: el 6 x86_64
+I, [2016-09-19T20:30:05.902121 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Getting information for chef stable  for el...
+I, [2016-09-19T20:30:05.902187 #738]  INFO -- default-sbeliakou-centos-67-x86-64: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+I, [2016-09-19T20:30:05.902297 #738]  INFO -- default-sbeliakou-centos-67-x86-64:   to file /tmp/install.sh.17823/metadata.txt
+I, [2016-09-19T20:30:05.902783 #738]  INFO -- default-sbeliakou-centos-67-x86-64: trying wget...
+I, [2016-09-19T20:30:06.240018 #738]  INFO -- default-sbeliakou-centos-67-x86-64: sha1	9e4078002ffb604f29ac0fdc92c5a8a13e4e3491
+I, [2016-09-19T20:30:06.240142 #738]  INFO -- default-sbeliakou-centos-67-x86-64: sha256	78722816dd421fc8bae538fe559c37a59d5fd09c833cd4c97e577c59ecd5bc0f
+I, [2016-09-19T20:30:06.240192 #738]  INFO -- default-sbeliakou-centos-67-x86-64: url	https://packages.chef.io/stable/el/6/chef-12.14.60-1.el6.x86_64.rpm
+I, [2016-09-19T20:30:06.240236 #738]  INFO -- default-sbeliakou-centos-67-x86-64: version	12.14.60
+I, [2016-09-19T20:30:06.242731 #738]  INFO -- default-sbeliakou-centos-67-x86-64: downloaded metadata file looks valid...
+I, [2016-09-19T20:30:06.255177 #738]  INFO -- default-sbeliakou-centos-67-x86-64: downloading https://packages.chef.io/stable/el/6/chef-12.14.60-1.el6.x86_64.rpm
+I, [2016-09-19T20:30:06.255269 #738]  INFO -- default-sbeliakou-centos-67-x86-64:   to file /tmp/install.sh.17823/chef-12.14.60-1.el6.x86_64.rpm
+I, [2016-09-19T20:30:06.256759 #738]  INFO -- default-sbeliakou-centos-67-x86-64: trying wget...
+I, [2016-09-19T20:30:22.199152 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Comparing checksum with sha256sum...
+I, [2016-09-19T20:30:22.526099 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:22.526184 #738]  INFO -- default-sbeliakou-centos-67-x86-64: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-09-19T20:30:22.526266 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:22.526298 #738]  INFO -- default-sbeliakou-centos-67-x86-64: You are installing an omnibus package without a version pin.  If you are installing
+I, [2016-09-19T20:30:22.526328 #738]  INFO -- default-sbeliakou-centos-67-x86-64: on production servers via an automated process this is DANGEROUS and you will
+I, [2016-09-19T20:30:22.526350 #738]  INFO -- default-sbeliakou-centos-67-x86-64: be upgraded without warning on new releases, even to new major releases.
+I, [2016-09-19T20:30:22.526377 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Letting the version float is only appropriate in desktop, test, development or
+I, [2016-09-19T20:30:22.526400 #738]  INFO -- default-sbeliakou-centos-67-x86-64: CI/CD environments.
+I, [2016-09-19T20:30:22.526421 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:22.526441 #738]  INFO -- default-sbeliakou-centos-67-x86-64: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-09-19T20:30:22.526461 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:22.526480 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Installing chef 
+I, [2016-09-19T20:30:22.526500 #738]  INFO -- default-sbeliakou-centos-67-x86-64: installing with rpm...
+I, [2016-09-19T20:30:22.992786 #738]  INFO -- default-sbeliakou-centos-67-x86-64: warning: /tmp/install.sh.17823/chef-12.14.60-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2016-09-19T20:30:24.023280 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Preparing...                                                            (100%)#                                           (100%)##                                          (100%)###                                         (100%)####                                        (100%)#####                                       (100%)######                                      (100%)#######                                     (100%)########                                    (100%)#########                                   (100%)##########                                  (100%)###########                                 (100%)############                                (100%)#############                               (100%)##############                              (100%)###############                             (100%)################                            (100%)#################                           (100%)##################                          (100%)###################                         (100%)####################                        (100%)#####################                       (100%)######################                      (100%)#######################                     (100%)########################                    (100%)#########################                   (100%)##########################                  (100%)###########################                 (100%)############################                (100%)#############################               (100%)##############################              (100%)###############################             (100%)################################            (100%)#################################           (100%)##################################          (100%)###################################         (100%)####################################        (100%)#####################################       (100%)######################################      (100%)#######################################     (100%)########################################    (100%)#########################################   (100%)##########################################  (100%)########################################### (100%)########################################### [100%]
+I, [2016-09-19T20:30:26.392130 #738]  INFO -- default-sbeliakou-centos-67-x86-64:    1:chef                                                               (  1%)#                                           (  3%)##                                          (  6%)###                                         (  8%)####                                        ( 10%)#####                                       ( 13%)######                                      ( 15%)#######                                     ( 17%)########                                    ( 19%)#########                                   ( 22%)##########                                  ( 24%)###########                                 ( 26%)############                                ( 28%)#############                               ( 31%)##############                              ( 33%)###############                             ( 35%)################                            ( 38%)#################                           ( 40%)##################                          ( 42%)###################                         ( 44%)####################                        ( 47%)#####################                       ( 49%)######################                      ( 51%)#######################                     ( 53%)########################                    ( 56%)#########################                   ( 58%)##########################                  ( 60%)###########################                 ( 63%)############################                ( 65%)#############################               ( 67%)##############################              ( 69%)###############################             ( 72%)################################            ( 74%)#################################           ( 76%)##################################          ( 78%)###################################         ( 81%)####################################        ( 83%)#####################################       ( 85%)######################################      ( 88%)#######################################     ( 90%)########################################    ( 92%)#########################################   ( 94%)##########################################  ( 97%)########################################### ( 99%)########################################### [100%]
+I, [2016-09-19T20:30:27.477624 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Thank you for installing Chef!
+I, [2016-09-19T20:30:27.559887 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Transferring files to <default-sbeliakou-centos-67-x86-64>
+I, [2016-09-19T20:30:29.245615 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Starting Chef Client, version 12.14.60
+I, [2016-09-19T20:30:34.163304 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Creating a new client identity for default-sbeliakou-centos-67-x86-64 using the validator key.
+I, [2016-09-19T20:30:34.353380 #738]  INFO -- default-sbeliakou-centos-67-x86-64: resolving cookbooks for run list: ["jenkins::default"]
+I, [2016-09-19T20:30:34.353465 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353488 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ================================================================================
+I, [2016-09-19T20:30:34.353510 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Error Resolving Cookbooks for Run List:
+I, [2016-09-19T20:30:34.353531 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ================================================================================
+I, [2016-09-19T20:30:34.353551 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353571 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Missing Cookbooks:
+I, [2016-09-19T20:30:34.353591 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ------------------
+I, [2016-09-19T20:30:34.353610 #738]  INFO -- default-sbeliakou-centos-67-x86-64: No such cookbook: jenkins
+I, [2016-09-19T20:30:34.353630 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353659 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Expanded Run List:
+I, [2016-09-19T20:30:34.353689 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ------------------
+I, [2016-09-19T20:30:34.353709 #738]  INFO -- default-sbeliakou-centos-67-x86-64: * jenkins::default
+I, [2016-09-19T20:30:34.353729 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353757 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Platform:
+I, [2016-09-19T20:30:34.353777 #738]  INFO -- default-sbeliakou-centos-67-x86-64: ---------
+I, [2016-09-19T20:30:34.353796 #738]  INFO -- default-sbeliakou-centos-67-x86-64: x86_64-linux
+I, [2016-09-19T20:30:34.353815 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353834 #738]  INFO -- default-sbeliakou-centos-67-x86-64: 
+I, [2016-09-19T20:30:34.353859 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Running handlers:
+I, [2016-09-19T20:30:34.353881 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] ERROR: Running exception handlers
+I, [2016-09-19T20:30:34.353902 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Running handlers complete
+I, [2016-09-19T20:30:34.353921 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] ERROR: Exception handlers complete
+I, [2016-09-19T20:30:34.353941 #738]  INFO -- default-sbeliakou-centos-67-x86-64: Chef Client failed. 0 resources updated in 05 seconds
+I, [2016-09-19T20:30:34.353966 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-09-19T20:30:34.353987 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-09-19T20:30:34.354007 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] ERROR: 412 "Precondition Failed"
+I, [2016-09-19T20:30:34.390421 #738]  INFO -- default-sbeliakou-centos-67-x86-64: [2016-09-19T18:30:34+01:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-09-19T20:30:34.406223 #738] ERROR -- default-sbeliakou-centos-67-x86-64: Converge failed on instance <default-sbeliakou-centos-67-x86-64>.
+E, [2016-09-19T20:30:34.416383 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ------Exception-------
+E, [2016-09-19T20:30:34.416421 #738] ERROR -- default-sbeliakou-centos-67-x86-64: Class: Kitchen::ActionFailed
+E, [2016-09-19T20:30:34.416453 #738] ERROR -- default-sbeliakou-centos-67-x86-64: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-solo --config /tmp/kitchen/solo.rb --log_level auto --no-color --json-attributes /tmp/kitchen/dna.json  --force-formatter
+']
+E, [2016-09-19T20:30:34.416472 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ----------------------
+E, [2016-09-19T20:30:34.416489 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ------Backtrace-------
+E, [2016-09-19T20:30:34.416505 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2016-09-19T20:30:34.416523 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2016-09-19T20:30:34.416540 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2016-09-19T20:30:34.416558 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2016-09-19T20:30:34.416575 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:485:in `block in action'
+E, [2016-09-19T20:30:34.416592 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-09-19T20:30:34.416633 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:484:in `action'
+E, [2016-09-19T20:30:34.416651 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2016-09-19T20:30:34.416668 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2016-09-19T20:30:34.416686 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:354:in `each'
+E, [2016-09-19T20:30:34.416703 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2016-09-19T20:30:34.416720 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:160:in `verify'
+E, [2016-09-19T20:30:34.416737 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:189:in `block in test'
+E, [2016-09-19T20:30:34.416754 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-09-19T20:30:34.416771 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:185:in `test'
+E, [2016-09-19T20:30:34.416787 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-09-19T20:30:34.416805 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-09-19T20:30:34.416822 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-09-19T20:30:34.416839 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ----End Backtrace-----
+E, [2016-09-19T20:30:34.416855 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ---Nested Exception---
+E, [2016-09-19T20:30:34.416872 #738] ERROR -- default-sbeliakou-centos-67-x86-64: Class: Kitchen::Transport::SshFailed
+E, [2016-09-19T20:30:34.416917 #738] ERROR -- default-sbeliakou-centos-67-x86-64: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-solo --config /tmp/kitchen/solo.rb --log_level auto --no-color --json-attributes /tmp/kitchen/dna.json  --force-formatter
+']
+E, [2016-09-19T20:30:34.416935 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ----------------------
+E, [2016-09-19T20:30:34.416952 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ------Backtrace-------
+E, [2016-09-19T20:30:34.416968 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2016-09-19T20:30:34.416985 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2016-09-19T20:30:34.417002 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:380:in `block in converge_action'
+E, [2016-09-19T20:30:34.417019 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:520:in `synchronize_or_call'
+E, [2016-09-19T20:30:34.417036 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:485:in `block in action'
+E, [2016-09-19T20:30:34.417056 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-09-19T20:30:34.417073 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:484:in `action'
+E, [2016-09-19T20:30:34.417090 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:376:in `converge_action'
+E, [2016-09-19T20:30:34.417108 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:355:in `block in transition_to'
+E, [2016-09-19T20:30:34.417124 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:354:in `each'
+E, [2016-09-19T20:30:34.417141 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:354:in `transition_to'
+E, [2016-09-19T20:30:34.417158 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:160:in `verify'
+E, [2016-09-19T20:30:34.417175 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:189:in `block in test'
+E, [2016-09-19T20:30:34.417192 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2016-09-19T20:30:34.417209 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/instance.rb:185:in `test'
+E, [2016-09-19T20:30:34.417226 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:201:in `public_send'
+E, [2016-09-19T20:30:34.417243 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2016-09-19T20:30:34.417260 #738] ERROR -- default-sbeliakou-centos-67-x86-64: /home/Student/.rvm/gems/ruby-2.3.0/gems/test-kitchen-1.13.0/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2016-09-19T20:30:34.417277 #738] ERROR -- default-sbeliakou-centos-67-x86-64: ----End Backtrace-----

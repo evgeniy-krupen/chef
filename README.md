@@ -7,12 +7,12 @@ Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employe
 
 **1. I created java [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/java/recipes/default.rb) with resource package**
 
-**2. I created nginx [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/recipes/default.rb) with [attributes](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/attributes/default.rb). I used [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/templates/default/default.erb) for default config nginx**
+**2. I created nginx [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/recipes/default.rb) with [attributes](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/attributes/default.rb). Also I used [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/templates/default/default.erb) for default config nginx**
 
 
-**3. I created tomcat [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/recipes/default.rb) (install tomcat, tomcat-webapps) with [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/templates/default/default.erb) and [attribute](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/attributes/default.rb)**
+**3. The next step was create tomcat [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/recipes/default.rb) (install tomcat, tomcat-webapps) with [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/templates/default/default.erb) and [attribute](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/attributes/default.rb)**
 
-**4. I created jenkins [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/jenkins/recipes/default.rb) (install jenkins-repo, jenkins, git, [templates](https://github.com/evgeniy-krupen/chef/tree/exittask/exit-task/chef_cookbooks/jenkins/templates/default))**
+**4. The final step was create jenkins [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/jenkins/recipes/default.rb) (install jenkins-repo, jenkins, git, [templates](https://github.com/evgeniy-krupen/chef/tree/exittask/exit-task/chef_cookbooks/jenkins/templates/default))**
 
 I bootstrap all my cookbook on 1 VM by:
 

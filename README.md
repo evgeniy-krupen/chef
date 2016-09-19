@@ -1,45 +1,39 @@
 MTN.NIX.11 Automated environment configuration management
 ---
 
-Chef Introduction
+Exit Task
 
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
+**1. 1. I created java [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/java/recipes/default.rb) with resource package**
 
-1. I setup vagrant box and install chef-solo:
+**2. I created nginx [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/recipes/default.rb) with [attributes](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/attributes/default.rb). I used [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/nginx/templates/default/default.erb) for default config nginx**
 
-wget https://packages.chef.io/stable/el/6/chef-12.13.37-1.el6.x86_64.rpm
-rpm -i chef-12.13.37-1.el6.x86_64.rpm
-wget https://packages.chef.io/stable/el/6/chefdk-0.17.17-1.el6.x86_64.rpm
-rpm -i chefdk-0.17.17-1.el6.x86_64.rpm
 
-2. I created ~/.chef/solo.rb file with context:
+**3. I created tomcat [cookbook](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/recipes/default.rb) (install tomcat, tomcat-webapps) with [template](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/templates/default/default.erb) and [attribute](https://github.com/evgeniy-krupen/chef/blob/exittask/exit-task/chef_cookbooks/tomcat/attributes/default.rb)**
 
-log_level :debug
-file_cache_path "/root/.chef/"
-cookbook_path "/root/chef_cookbooks"
-json_attribs "/root/.chef/runlist.json"
+**4. I created jenkins cookbook (install jenkins-repo, jenkins, git, templates)**
 
-Also I created runlist.json file (will come back to it later)
+I bootstrap all my cookbook on 1 VM by:
 
-3. I downloaded cookboks from http://community.opscode.com/cookbooks/ for nginx and iptables. Then I saw in metadata.rb and realized that nginx has dependencies. I used berkshelf for solve this issue:
+knife bootstrap 192.168.25.10 -N web2 -x root -P vagrant -r 'role[exittask]' -E 'Chef-env'
 
-cd /root/chef_cookbooks/nginx
-berks init
-yum install git
-berks init (again)
-berks install
-berks packege
 
-As output I got artefact with all dependencies. I extracted it in /root/chef_cookbooks.
 
-4. I created runlist.json in /root/.chef/runlist.json :
+5. I used foodcritic, checked my cookbook and fixed all bugs
 
-{ 
-"run_list": ["recipe[nginx::default]", "recipe[iptables::default]"],
-  "nginx": {"default_root":"/usr/share/nginx/html"} 
-}
+gem install foodcritic
 
-5. I run chef-solo after all steps (with logging)
+6. I read articles on chef test but i did not understand how it works
 
-chef-solo -c /root/.chef/solo.rb > cheflog.log
+I used:
+gem install test-kitchen
+gem install yard-chef
+gem install ripper
+gem install serverspec
+
+I created test/integration/default/serverspec/default_spec.rb
+with testing 22 port and tools
+
+
+

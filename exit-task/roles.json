@@ -1,0 +1,20 @@
+{
+  "name": "exittask",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[java::default]",
+    "recipe[nginx::default]",
+    "recipe[tomcat::default]",
+    "recipe[jenkins::default]"
+  ],
+  "env_run_lists": {
+
+  }

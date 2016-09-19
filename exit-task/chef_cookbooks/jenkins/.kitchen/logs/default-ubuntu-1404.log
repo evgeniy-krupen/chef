@@ -1,0 +1,14 @@
+I, [2016-09-19T15:19:27.194396 #3026]  INFO -- default-ubuntu-1404: -----> Cleaning up any prior instances of <default-ubuntu-1404>
+I, [2016-09-19T15:19:27.194604 #3026]  INFO -- default-ubuntu-1404: -----> Destroying <default-ubuntu-1404>...
+I, [2016-09-19T15:19:27.195576 #3026]  INFO -- default-ubuntu-1404: Finished destroying <default-ubuntu-1404> (0m0.00s).
+I, [2016-09-19T15:19:27.195873 #3026]  INFO -- default-ubuntu-1404: -----> Testing <default-ubuntu-1404>
+I, [2016-09-19T15:19:27.196011 #3026]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2016-09-19T15:19:28.464267 #3026]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2016-09-19T15:19:28.639112 #3026]  INFO -- default-ubuntu-1404: ==> default: Box 'bento/ubuntu-14.04' could not be found. Attempting to find and install...
+I, [2016-09-19T15:19:28.639292 #3026]  INFO -- default-ubuntu-1404:     default: Box Provider: virtualbox
+I, [2016-09-19T15:19:28.639494 #3026]  INFO -- default-ubuntu-1404:     default: Box Version: >= 0
+I, [2016-09-19T15:19:29.584753 #3026]  INFO -- default-ubuntu-1404: ==> default: Loading metadata for box 'bento/ubuntu-14.04'
+I, [2016-09-19T15:19:29.585216 #3026]  INFO -- default-ubuntu-1404:     default: URL: https://atlas.hashicorp.com/bento/ubuntu-14.04
+I, [2016-09-19T15:19:30.836621 #3026]  INFO -- default-ubuntu-1404: ==> default: Adding box 'bento/ubuntu-14.04' (v2.2.9) for provider: virtualbox
+I, [2016-09-19T15:19:30.839875 #3026]  INFO -- default-ubuntu-1404:     default: Downloading: https://atlas.hashicorp.com/bento/boxes/ubuntu-14.04/versions/2.2.9/providers/virtualbox.box
+I, [2016-09-19T15:19:30.840119 #3026]  INFO -- default-ubuntu-1404: ==> default: Box download is resuming from prior download progress

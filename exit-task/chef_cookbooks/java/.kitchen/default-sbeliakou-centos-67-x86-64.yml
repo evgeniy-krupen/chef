@@ -1,6 +1,0 @@
----
-hostname: 127.0.0.1
-port: '2202'
-username: vagrant
-ssh_key: "/home/Student/Desktop/vargant/mntlab/chef_cookbooks/java/.kitchen/kitchen-vagrant/kitchen-java-default-sbeliakou-centos-67-x86-64/.vagrant/machines/default/virtualbox/private_key"
-last_action: verify
